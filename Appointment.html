@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Website</title>
+    <link rel="stylesheet" href="Appointment.css">
+
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="Index.html">Index</a></li>
+            <li><a href="About us.html">About us</a></li>
+            <li><a href="Who we are.html">Who we are</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="Our Album.html">Our Gallery</a></li>
+            <li><a href="contact us.html">Contact us</a></li>
+            <li><a href="Dashboard.html">Dashboard</a></li>
+            <li><a href="Blogs.html">Blogs</a></li>
+            <li><a href="Appointment.html">Appointment</a></li>
+            <!-- <select id="sign" required>
+                <option value="Sign up">Sign up</option>
+                <option value="Sign in">Sign in</option> -->  
+            <li><a href="sign up.html">Sign up</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Happy Family Website</h1>
+    </header>
+
+    <section>
+        <h2>Schedule an Appointment</h2>
+        <form>
+            <label for="family-member">Select Family Member:</label>
+            <select id="family-member" required>
+                <option value="parent">Parents</option>
+                <option value="child">Childs</option>
+                <option value="grandparent">Grandparents</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" required>
+
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" id="appointment-time" required>
+
+            <button type="button" onclick="scheduleAppointment()">Schedule Appointment</button>
+        </form>
+    </section>
+
+    <script>
+        function scheduleAppointment() {
+            const familyMember = document.getElementById('family-member').value;
+            const appointmentDate = document.getElementById('appointment-date').value;
+            const appointmentTime = document.getElementById('appointment-time').value;
+
+            // You can add further logic to handle the appointment data
+            // For now, let's just log the details
+            console.log(`Appointment scheduled for ${familyMember} on ${appointmentDate} at ${appointmentTime}`);
+        }
+    </script>
+      <div class="min">
+        <button class="Back to Home"><a href="Index.html">Back to Home</a></button> <br><br><br>
+      </div>
+</body>
+</html>
